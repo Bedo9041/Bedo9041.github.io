@@ -208,7 +208,7 @@
                             }
                             for (var row = 0; row <= 5; row++) { // SECOND PASS, LOOKING FOR 2 HIGH, 3 WIDE
                                 for (var col = 0; col <= 5; col++) {
-                                    if (board[col + row * 6] === "L") {
+                                    if (board[col + row * 6] === "L" || board[col + row * 6] === "S" || board[col + row * 6] === "C") {
                                         counts[col + row * 6] = 0;
                                     }
                                 }
@@ -326,15 +326,15 @@
         <h1>Faux Hollow Solver</h1>
         <h2>Instructions</h2>
         <ol>
-            <li>Select whether you want to find the chest; the sword; both the chest and the sword; or the fox <i>(note: solving for both may not find you either before running out of attempts) (note: solving for the fox simply shows the areas you are least likely to find the chest or swords, due to the fox being 1x1 you are unlikely to find it)</i></li>
+            <li>Select whether you want to find the chest; the swords; both the chest and the swords; or the fox <i>(note: solving for both may not find you either before running out of attempts) (note: solving for the fox simply shows the areas you are least likely to find the chest or swords, due to the fox being 1x1 you are unlikely to find it)</i></li>
             <li>Fill in the locked slots</li>
             <li>Reveal any one of the slots highlighted in green and fill in what was in that slot</li>
             <li>Repeat until the desired picture is found</li>
             <li>You can now change what you are search for if you wish</li>
         </ol>
         <input type="radio" id="chest" name="solvefor" value="chest" checked="checked">Chest
-        <input type="radio" id="sword" name="solvefor" value="sword">Sword
-        <input type="radio" id="both" name="solvefor" value="both">Sword and Chest
+        <input type="radio" id="sword" name="solvefor" value="sword">Swords
+        <input type="radio" id="both" name="solvefor" value="both">Swords and Chest
         <input type="radio" id="fox" name="solvefor" value="fox">Fox
         <table>
             <tr id="row0" align="center">

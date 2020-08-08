@@ -193,7 +193,7 @@ var FauxHollow = {
                 }
                 for (var row = 0; row <= 5; row++) { // SECOND PASS, LOOKING FOR 2 HIGH, 3 WIDE
                     for (var col = 0; col <= 5; col++) {
-                        if (board[col + row * 6] === "L") {
+                        if (board[col + row * 6] === "L" || board[col + row * 6] === "S" || board[col + row * 6] === "C") {
                             counts[col + row * 6] = 0;
                         }
                     }

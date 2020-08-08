@@ -198,18 +198,19 @@ var FauxHollow = {
                 for (var col = 0; col <= 5; col++) {
                     var index = col + row * 6;
                     if (counts[index] == maxval) {
-                        $('select[row="' + row + '"][col="' + col + '"]').parent().addClass("recommended");
+                        $('select[row="' + row + '"][col="' + col + '"]').addClass("recommended");
                     }
                 }
             }
         }
     },
     clear: function() {
-        $('td').removeClass('recommended');
+        $('select').removeClass('recommended');
     },
     reset: function() {
         FauxHollow.clear();
         $('select').prop('selectedIndex',0);
+        FauxHollow.calc();
     },
     State: function() {
         this.board = [];
@@ -217,3 +218,4 @@ var FauxHollow = {
         this.swordCount = 0;
     }
 }
+$(document).ready(FauxHollow.setup);

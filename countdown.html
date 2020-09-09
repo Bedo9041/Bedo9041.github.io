@@ -15,7 +15,7 @@
 
       // Set the date we're counting down to
       var d = new Date(0);
-      d.setUTCMilliseconds(urlParams.get('c'))
+      d.setUTCSeconds(urlParams.get('c'))
       var countDownDate = d.getTime();
 
       // Update the count down every 1 second

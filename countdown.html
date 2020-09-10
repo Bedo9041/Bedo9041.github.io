@@ -8,6 +8,10 @@
         vertical-align: middle;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 70px;
+        color: rgb(245, 245, 245)
+      }
+      body {
+        background-color: rgb(52, 52, 52);
       }
     </style>
     <script type="text/javascript">
@@ -34,7 +38,7 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        document.getElementById("demo").innerHTML = days + "d " + hours + "hr " + minutes + "m " + seconds + "s";
 
         // If the count down is finished, write some text
         if (distance < 0) {
